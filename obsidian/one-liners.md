@@ -1,0 +1,4 @@
+- `cargo new <Binary Name>` Creates new binary (application) project.
+- `cargo new <Library Name> --lib` Creates new library project.
+- Import modules with: `use <Library>::<Module>;`
+- 
