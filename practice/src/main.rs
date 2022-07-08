@@ -1,6 +1,17 @@
 fn main() {
-    let x = 5;
-    println!("The value of x is {}", x);
-    // x = 6;
-    // println!("The value of x is {}", x);
+    struct SpreadsheetCell {
+        int: i32,
+        float: f64,
+        text: String,
+    }
+
+    let spreadsheet = SpreadsheetCell {
+        int: 10,
+        float: 12.2,
+        text: String::from("nice"),
+    };
+
+    match &spreadsheet.float {
+        
+    }
 }
