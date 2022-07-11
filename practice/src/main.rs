@@ -1,17 +1,9 @@
 fn main() {
-    struct SpreadsheetCell {
-        int: i32,
-        float: f64,
-        text: String,
-    }
+    let x = String::from("Tenzin is so cute");
+    println!("{}", x)
+}
 
-    let spreadsheet = SpreadsheetCell {
-        int: 10,
-        float: 12.2,
-        text: String::from("nice"),
-    };
-
-    match &spreadsheet.float {
-        
-    }
+fn _do_something<'a>(x: &'a u64, _y: &'a u64) -> &'a u64 {
+    println!("{}", x);
+    x
 }
