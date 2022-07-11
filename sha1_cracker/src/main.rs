@@ -28,7 +28,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     for line in reader.lines() {
         let line = line?.trim().to_string();
         let common_password = line.trim();
-        if hash_to_crack == &hex::encode(sha1::Sha1::digest(common_password.as_bytes())) {
+        if hash_to_crack == hex::encode(sha1::Sha1::digest(common_password.as_bytes())) {
             println!("Password found: {}", &common_password);
             return Ok(());
         }
@@ -37,3 +37,5 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     Ok(())
 }
+
+// cargo run rockyou.txt 7c6a61c68ef8b9b6b061b28c348bc1ed7921cb53
